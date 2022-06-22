@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>subscriptions</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+	
+			<th>Name</th>
+			<th>Duration</th>
+			<th>feestructure</th>	
+		</tr>
+
+		{% for i in data %}
+		<tr>
+			<td>{{i.name}}</td>
+			<td>{{i.duration}}</td>
+			<td>{{i.feestructure}}</td>		
+			<td><a href="#">Pay Now</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% for i in data %}
+<div class="conatiner">
+<h4 class="card-title">{{i.name}}</h4>
+	<div>
+      <p class="card-text">{{i.name}}</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{i.duration}}</h4>
+      <p class="card-text">{{i.feestructure}}</p>
+      <p class="card-text">{{i.category}}</p>
+      <a href="{% url 'book' i.id %}" class="btn btn-success">Pay Now</a>
+    </div>
+ </div>
+ {% endfor %}
+</body>
+</html>
