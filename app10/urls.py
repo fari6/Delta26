@@ -15,7 +15,9 @@ urlpatterns = [
     path('paymenthandler/', views.paymenthandler, name='paymenthandler'),
     path('pay/',PaymentView.as_view(), name='pay'),
     path('book/<int:pk>', SubBookView.as_view(), name='book'),
-
+    path('feature', featureview.as_view(),name='feature'),
+    path('aboutus', aboutusview.as_view(),name='aboutus'),
+    path('workinghours', workinghoursview.as_view(),name='workinghours')
 
 
 ]

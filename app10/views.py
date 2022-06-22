@@ -16,8 +16,18 @@ from django.http import HttpResponseBadRequest
 class homeview(TemplateView):
 	template_name='home.html'
 
+class featureview(TemplateView):
+	template_name='feature.html'
+
+
+class aboutusview(TemplateView):
+	template_name='aboutus.html'
+
 class RegisterView(View):
-	template_name='register.html'	
+	template_name='register.html'
+
+class workinghoursview(TemplateView):
+	template_name='workinghours.html'
 
 	def get(self,request):
 		context={'form':UserRegisterForm}
@@ -193,4 +203,3 @@ def paymenthandler(request):
 	else:
 		# if other than POST request is made.
 		return HttpResponseBadRequest()
-

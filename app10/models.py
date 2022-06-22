@@ -17,7 +17,7 @@ class AddSubscriptionModel(models.Model):
 	name=models.CharField(max_length=30)
 	duration=models.CharField(max_length=30)
 	feestructure=models.IntegerField()
-	category=models.CharField(max_length=30)
+	category=models.CharField(max_length=30,default='')
 	status=models.BooleanField(default=True)
 	created_on=models.DateTimeField(auto_now=True)
 	
@@ -31,7 +31,7 @@ class SubBookModel(models.Model):
 	name=models.CharField(max_length=30)
 	duration=models.CharField(max_length=30)
 	feestructure=models.IntegerField()
-	category=models.CharField(max_length=30)
+	category=models.CharField(max_length=30,default='')
 	status=models.BooleanField(default=True)
 	payment_status=models.BooleanField(default=False)
 	created_on=models.DateTimeField(auto_now=True)
